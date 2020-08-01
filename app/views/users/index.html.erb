@@ -1,0 +1,15 @@
+<table>
+<h1>Listing Users</h1>
+<% @users.each do |user| %>
+<p>
+  User_ID: <%= user.id %>
+ <p>
+<p>
+  Name: <%= user.name %>
+ <p>
+<p> 	
+<%= link_to 'New item', new_item_path(user) %>
+</p>
+<% end %>
+</table>
+<%= link_to 'List items', items_path %>

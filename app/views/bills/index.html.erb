@@ -1,0 +1,15 @@
+<table>
+  <h1>List Bills</h1>
+  <% @bills.each do |bill| %>
+  <tr>
+      <td>Bill_ID: <%= bill.id %></td>
+    </tr>
+    <tr>
+      <td>Item Price <%= bill.item_price %></td>
+    </tr>
+    <td><%= link_to 'Edit', edit_bill_path(bill) %>
+    <%= link_to 'Destroy', bill_path(bill), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</table>
+<%= link_to 'Create Bill', new_bill_path %><br>
+<%= link_to 'Back', items_path %>

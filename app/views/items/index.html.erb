@@ -1,0 +1,19 @@
+<table>
+  <h1>List Items</h1>
+  <% @items.each do |item| %>
+  <tr>
+      <td>Item_ID: <%= item.id %></td>
+    </tr>
+    <tr>
+      <td>Name: <%= item.item_name %></td>
+    </tr>
+    <tr>
+      <td>Item Price <%= item.item_price %></td>
+    </tr>
+    <td><%= link_to 'Edit', edit_item_path(item) %>
+    <%= link_to 'Destroy', item_path(item), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</table>
+<%= link_to 'Back', users_path %><br>
+<%= link_to 'Create Bill', new_bill_path %><br>
+<%= link_to 'Show Current User Bill', bills_path %>
