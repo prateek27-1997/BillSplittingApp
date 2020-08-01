@@ -1,0 +1,14 @@
+<h1> Change Bill </h1>
+<%= form_for @bill do |f| %>
+<p>
+  <%= f.label :Bill_ID %> <br>
+  <%= f.text_area :id %>
+</p>
+<p>
+  <%= f.label :Item_Price %> <br>
+  <%= f.text_area :item_price %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
